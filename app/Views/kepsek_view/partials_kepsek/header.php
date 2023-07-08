@@ -1,7 +1,7 @@
 <div class="header">
 
     <div class="header-left">
-        <a href="<?php echo base_url('home/index_guru'); ?>" class="logo">
+        <a href="<?php echo base_url('home/index_kepsek'); ?>" class="logo">
             <img src="<?php echo base_url('theme'); ?>/assets/img/img_real/logo_skansa.PNG" alt="Logo">
         </a>
         <a href="index.html" class="logo logo-small">

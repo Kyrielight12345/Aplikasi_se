@@ -10,15 +10,17 @@ class regalisir_model extends Model
     protected $table = 'regalisir';
 
 
-    public function getRegalisir($id=false)
+    public function getRegalisir($id = false)
     {
-        if ($id == false){
-            return $this->findAll();
-        }else{
-            return $this->getWhere(['nis' => $id ]);
+        if ($id == false) {
+            return $this->db->table('regalisir')
+                ->join('siswa', 'siswa.nis = regalisir.nis')
+                ->get()->getResultArray();
+        } else {
+            return $this->getWhere(['nis' => $id]);
         }
     }
-    
+
     public function insertRegalisir($data)
     {
         return $this->db->table($this->table)->insert($data);

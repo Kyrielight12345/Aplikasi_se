@@ -8,6 +8,10 @@ use App\Models\suratmasuk_model;
 use App\Models\nilai_model;
 use App\Models\nilai_view_model;
 use App\Models\absen_guru;
+use App\Models\ruang_model;
+use App\Models\mapel_model;
+use App\Models\regalisir_model;
+use App\Models\siswa_model;
 
 class kepsek_all extends BaseController
 {
@@ -54,5 +58,45 @@ class kepsek_all extends BaseController
         $model = new absen_guru();
         $data['presensi'] = $model->getAbsen();
         echo view('kepsek_view/presensi/index', $data);
+    }
+    public function index_ruang()
+    {
+        # code...
+        $model = new ruang_model();
+        $data['ruang'] = $model->getRuang();
+
+        //PAGINATE
+        $data['ruang'] = $model->paginate(4, 'ruang');
+        $data['pager'] = $model->pager;
+        echo view('kepsek_view/ruang/index', $data);
+    }
+    public function index_mapel()
+    {
+        # code...
+        $model = new mapel_model();
+        $data['mapel'] = $model->getMapel();
+
+        //PAGINATE
+        $data['mapel'] = $model->paginate(4, 'mapel');
+        $data['pager'] = $model->pager;
+        echo view('kepsek_view/mapel/index', $data);
+    }
+    public function index_regalisir()
+    {
+        # code...
+        $model = new regalisir_model();
+        $data['regalisir'] = $model->getRegalisir();
+        echo view('kepsek_view/regalisir/index', $data);
+    }
+    public function index_siswa()
+    {
+        # code...
+        $model = new siswa_model();
+        $data['siswa'] = $model->getSiswa();
+
+        //PAGINATE
+        $data['siswa'] = $model->paginate(4, 'siswa');
+        $data['pager'] = $model->pager;
+        echo view('kepsek_view/siswa/index', $data);
     }
 }

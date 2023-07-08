@@ -21,10 +21,6 @@ class regalisir extends BaseController
         # code...
         $model = new regalisir_model();
         $data['regalisir'] = $model->getRegalisir();
-
-        //PAGINATE
-        $data['regalisir'] = $model->paginate(4, 'regalisir');
-        $data['pager'] = $model->pager;
         echo view('admin_view/regalisir/index', $data);
     }
 

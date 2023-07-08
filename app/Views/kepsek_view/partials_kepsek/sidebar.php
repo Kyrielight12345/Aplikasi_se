@@ -25,13 +25,30 @@
                         <span>Main Menu</span>
                     </li>
                     <li class="menu">
-                        <a href="<?php echo base_url('kepsek_all/index_surat_masuk'); ?>"><i class="feather-grid"></i> <span>Data Guru</span></span></a>
+                        <a href="<?php echo base_url('home/index_kepsek'); ?>"><i class="feather-grid"></i> <span> Dashboard</span></span></a>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_siswa'); ?>"><i class="fas fa-graduation-cap"></i> <span>
+                                Data Siswa</span></span></a>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_guru'); ?>"><i class="fas fa-graduation-cap"></i> <span>
+                                Data Guru</span></span></a>
                     </li>
                     <li class="menu">
                         <a href="<?php echo base_url('kepsek_all/index_nilai'); ?>"><i class="fas fa-clipboard"></i> <span>Nilai Siswa</span></span></a>
                     </li>
                     <li class="menu">
                         <a href="<?php echo base_url('kepsek_all/index_absen'); ?>"><i class="fas fa-book-reader"></i> <span>Presensi Siswa</span></span></a>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_ruang'); ?>"><i class="fas fa-graduation-cap"></i> <span> Data Ruang</span></span></a>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_mapel'); ?>"><i class="fas fa-chalkboard-teacher"></i> <span>Data Mapel</span></span></a>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_regalisir'); ?>"><i class="fas fa-building"></i> <span>Status Regalisir </span></span></a>
                     </li>
                 </ul>
             </div>
