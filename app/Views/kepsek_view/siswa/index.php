@@ -39,7 +39,6 @@
                                         <th>Alamat</th>
                                         <th>Kelas dan Jurusan</th>
                                         <th>No Hp</th>
-                                        <th class="text-end">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
