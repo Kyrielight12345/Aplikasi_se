@@ -1,5 +1,5 @@
-<?php echo view('admin_view/partials/header') ?>
-<?php echo view('admin_view/partials/sidebar') ?>
+<?php echo view('kepsek_view/partials_kepsek/header') ?>
+<?php echo view('kepsek_view/partials_kepsek/sidebar') ?>
 
 
 
