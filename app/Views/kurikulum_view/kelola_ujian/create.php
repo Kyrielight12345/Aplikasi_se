@@ -15,6 +15,26 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <?php if (session()->has('warning')) : ?>
+                    <div class="alert alert-warning">
+                        <?php echo session('warning'); ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->has('success')) : ?>
+                    <div class="alert alert-success">
+                        <?php echo session('success'); ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->has('errors')) : ?>
+                    <div class="alert alert-danger">
+                        <?php foreach (session('errors') as $error) : ?>
+                            <p><?php echo $error; ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
                 <?php
                 $inputs = session()->getFlashdata('inputs');
                 $errors = session()->getFlashdata('errors');

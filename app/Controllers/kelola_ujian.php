@@ -62,21 +62,27 @@ class kelola_ujian extends BaseController
         $validation =  \Config\Services::validation();
 
         $data = array(
-            'id'     => $this->request->getPost('id'),
-            'id_guru'     => $this->request->getPost('id_guru'),
-            'id_mapel'     => $this->request->getVar('id_mapel'),
-            'id_ruang'     => $this->request->getPost('id_ruang'),
-            'tanggal'     => $this->request->getPost('tanggal'),
-            'jam_masuk'     => $this->request->getPost('jam_masuk'),
-            'jam_keluar'   => $this->request->getPost('jam_keluar')
+            'id' => $this->request->getPost('id'),
+            'id_guru' => $this->request->getPost('id_guru'),
+            'id_mapel' => $this->request->getVar('id_mapel'),
+            'id_ruang' => $this->request->getPost('id_ruang'),
+            'tanggal' => $this->request->getPost('tanggal'),
+            'jam_masuk' => $this->request->getPost('jam_masuk'),
+            'jam_keluar' => $this->request->getPost('jam_keluar')
         );
+
+        // Cek apakah data guru dan jam sudah ada sebelumnya
+        $model = new kelola_ujian_model();
+        if ($model->cekDataGuruJam($data['id_guru'], $data['jam_masuk'], $data['jam_keluar'])) {
+            session()->setFlashdata('warning', 'Data guru dan jam sudah ada sebelumnya.');
+            return redirect()->to(base_url('kelola_ujian/create'));
+        }
 
         if ($validation->run($data, 'kelola_ujian') == FALSE) {
             session()->setFlashdata('inputs', $this->request->getPost());
             session()->setFlashdata('errors', $validation->getErrors());
             return redirect()->to(base_url('kelola_ujian/create'));
         } else {
-            $model = new kelola_ujian_model();
             $simpan = $model->insertKelola_ujian($data);
             if ($simpan) {
                 session()->setFlashdata('success', 'Created data Kelola Panitia Ujian successfully');
@@ -84,6 +90,7 @@ class kelola_ujian extends BaseController
             }
         }
     }
+
     // public function update($id)
     // {
     //     $model = new kelola_ujian_model();
