@@ -14,15 +14,21 @@ use App\Models\regalisir_model;
 use App\Models\siswa_model;
 use App\Models\jadwal_model;
 use App\Models\user_tu_model;
+use App\Models\guru_model;
+use App\Models\kurikulum_model;
+use App\Models\kalender_model;
+use App\Models\kelola_ujian_model;
 
 class kepsek_all extends BaseController
 {
     protected $helpers = [];
     protected $suratmasuk_model;
+    protected $guru_model;
     public function __construct()
     {
         helper('form');
         $this->suratmasuk_model = new suratmasuk_model();
+        $this->guru_model = new guru_model();
     }
     public function index_surat_masuk()
     {
@@ -114,5 +120,38 @@ class kepsek_all extends BaseController
         $model = new user_tu_model();
         $data['users'] = $model->getUsers();
         echo view('kepsek_view/user/index', $data);
+    }
+    public function index_guru()
+    {
+        # code...
+        $model = new guru_model();
+        $data['guru_dan_staf'] = $model->getGuru();
+        echo view('kepsek_view/guru/index', $data);
+    }
+    public function guru_show($id)
+    {
+        $data['guru_dan_staf'] = $this->guru_model->getGuru($id)->getRowArray();
+        echo view('admin_view/guru/show', $data);
+    }
+    public function index_kurikulum()
+    {
+        # code...
+        $model = new kurikulum_model();
+        $data['kurikulum'] = $model->getKurikulum();
+        echo view('kepsek_view/kurikulum/index', $data);
+    }
+    public function index_kalender()
+    {
+        # code...
+        $model = new kalender_model();
+        $data['kalender'] = $model->getKalender();
+        echo view('kepsek_view/kalender/index', $data);
+    }
+    public function index_kelola_ujian()
+    {
+        # code...
+        $model = new kelola_ujian_model();
+        $data['kelola_ujian'] = $model->getKelola_ujian();
+        echo view('kepsek_view/ujian/index', $data);
     }
 }

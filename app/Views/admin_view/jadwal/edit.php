@@ -91,7 +91,7 @@
                                 <div class="col-12 col-sm-4">
                                     <div class="form-group local-forms clock-icon">
                                         <label>Jam Awal<span class="login-danger">*</span></label>
-                                        <input class="form-control datetimepicker" type="time" placeholder="HH:II" name="jam_awal" value=" <?= $jadwal['jam_awal']; ?>">
+                                        <input class="form-control datetimepicker" type="time" placeholder="HH:II" name="jam_awal" value="<?= $jadwal['jam_awal']; ?>">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-4">

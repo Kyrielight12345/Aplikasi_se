@@ -46,7 +46,7 @@
                                 <?php foreach ($jadwal as $key => $row) { ?>
                                     <tr>
                                         <td><?php echo $key + 1; ?></td>
-                                        <td><?php echo $row['mapel']; ?></td>
+                                        <td>indonesia</td>
                                         <td><?php echo $row['id_ruang']; ?></td>
                                         <td><?php echo $row['hari']; ?></td>
                                         <td><?php echo $row['jam_awal']; ?> - <?php echo $row['jam_akhir']; ?></td>

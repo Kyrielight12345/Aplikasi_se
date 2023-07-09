@@ -1,5 +1,5 @@
-<?php echo view('admin_view/partials/header') ?>
-<?php echo view('admin_view/partials/sidebar') ?>
+<?php echo view('kurikulum_view/partials/header') ?>
+<?php echo view('kurikulum_view/partials/sidebar') ?>
 
 
 

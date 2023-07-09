@@ -25,7 +25,7 @@
                         <span>Main Menu</span>
                     </li>
                     <li class="menu">
-                        <a href="<?php echo base_url('home'); ?>"><i class="feather-grid"></i> <span>
+                        <a href="<?php echo base_url('home/index_admin'); ?>"><i class="feather-grid"></i> <span>
                                 Dashboard</span></span></a>
                     </li>
                     <li class="menu">

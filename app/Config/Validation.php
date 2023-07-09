@@ -385,8 +385,61 @@ class Validation extends BaseConfig
         'poin'    => [
             'required' => 'poin  wajib diisi.'
         ],
+    ];
+    public $kurikulum = [
+        'id_kurikulum'     => 'required'
+    ];
 
+    public $kurikulum_errors = [
+        'id_kurikulum' => [
+            'required'    => 'ID Kurikulum wajib diisi.',
+        ],
 
+    ];
 
+    public $kelola_ujian = [
+        'id_guru'     => 'required',
+        'id_mapel'     => 'required',
+        'id_ruang'     => 'required',
+
+        'tanggal'     => 'required',
+        'jam_masuk'     => 'required',
+        'jam_keluar'     => 'required',
+    ];
+
+    public $kelola_ujian_errors = [
+        'id_guru' => [
+            'required'    => 'ID Guru wajib diisi.',
+        ],
+        'id_mapel' => [
+            'required'    => 'ID Mata Pelajaran wajib diisi.',
+        ],
+        'id_ruang' => [
+            'required'    => 'ID Ruang wajib diisi.',
+        ],
+
+        'tanggal'    => [
+            'required' => 'Tanggal wajib diisi.'
+        ],
+        'jam_masuk'    => [
+            'required' => 'Jam Masuk wajib diisi.'
+        ],
+        'jam_keluar'    => [
+            'required' => 'Jam Keluar wajib diisi.'
+        ],
+    ];
+
+    public $kalender = [
+        'tanggal'     => 'required',
+        'keterangan'     => 'required',
+    ];
+
+    public $kalender_errors = [
+        'tanggal'    => [
+            'required' => 'Tanggal wajib diisi.'
+        ],
+        'keterangan'    => [
+            'required' => 'keterangan  wajib diisi.'
+        ],
     ];
 }

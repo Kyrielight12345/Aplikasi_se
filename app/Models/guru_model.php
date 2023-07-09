@@ -12,15 +12,14 @@ class guru_model extends Model
 
     public function getGuru($id = false)
     {
-        if ($id == false){
+        if ($id == false) {
             return $this->findAll();
-        }else{
-            return $this->getWhere(['id_guru ' => $id ]);
+        } else {
+            return $this->getWhere(['id_guru ' => $id]);
         }
     }
     public function insertGuru($data)
     {
         return $this->db->table($this->table)->insert($data);
     }
-   
 }

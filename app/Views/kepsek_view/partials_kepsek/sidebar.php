@@ -61,6 +61,15 @@
                         </ul>
                     </li>
                     <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_kurikulum'); ?>"><i class="fas fa-clipboard"></i> <span>Data Kurikulum</span></span></a>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_kelola_ujian'); ?>"><i class="fas fa-clipboard"></i> <span>Data Ujian</span></span></a>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_kalender'); ?>"><i class="fas fa-clipboard"></i> <span>Data Kalender</span></span></a>
+                    </li>
+                    <li class="menu">
                         <a href="<?php echo base_url('kepsek_all/index_user'); ?>"><i class="fas fa-solid fa-user"></i></i> <span> User</span></span></a>
                     </li>
                 </ul>

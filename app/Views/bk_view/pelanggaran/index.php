@@ -63,7 +63,11 @@
                                             <td><?php echo $key + 1; ?></td>
                                             <td><?php echo $row['nama_siswa']; ?></td>
                                             <td><?php echo $row['total_poin']; ?></td>
-                                            <td><?php if ($row['total_poin'] >= 100) {
+                                            <td><?php if ($row['total_poin'] >= 150) {
+                                                    $pesan = "Kembalikan Ke Orang Tua";
+                                                } else if ($row['total_poin'] >= 100) {
+                                                    $pesan = "Panggilan Orang Tua";
+                                                } else if ($row['total_poin'] >= 50) {
                                                     $pesan = "Peringatan";
                                                 } else {
                                                     $pesan = "Masih Aman";
