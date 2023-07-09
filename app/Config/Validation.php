@@ -291,4 +291,102 @@ class Validation extends BaseConfig
             'required' => 'jam akhir  wajib diisi.',
         ],
     ];
+    public $dispensasi = [
+        'nis'     => 'required',
+        'tanggal'     => 'required',
+        'keterangan'     => 'required',
+    ];
+
+    public $dispensasi_errors = [
+
+        'nis'    => [
+            'required' => 'Nis wajib diisi.'
+        ],
+        'tanggal'    => [
+            'required' => 'Tanggal wajib diisi.'
+        ],
+        'keterangan'    => [
+            'required' => 'keterangan  wajib diisi.'
+        ],
+    ];
+
+    public $konseling = [
+
+        'nis'     => 'required',
+        'tanggal'     => 'required',
+    ];
+
+    public $konseling_errors = [
+
+        'nis'    => [
+            'required' => 'NIS wajib diisi.'
+        ],
+        'tanggal'    => [
+            'required' => 'Tanggal Konseling wajib diisi.'
+        ],
+    ];
+
+
+    public $surat = [
+        'no_surat'     => 'required',
+        'hal'     => 'required',
+        'nis'     => 'required',
+        'hari'     => 'required',
+        'tanggal'     => 'required',
+        'waktu'     => 'required',
+        'keperluan'     => 'required',
+    ];
+
+    public $surat_errors = [
+        'no_surat' => [
+            'required'    => 'no wajib diisi.',
+        ],
+        'hal'    => [
+            'required' => 'hal wajib diisi.'
+        ],
+        'nis'    => [
+            'required' => 'nis wajib diisi.'
+        ],
+        'hari'    => [
+            'required' => 'hari  wajib diisi.'
+        ],
+        'tanggal'    => [
+            'required' => 'tanggal  wajib diisi.'
+        ],
+        'waktu'    => [
+            'required' => 'waktu  wajib diisi.'
+        ],
+        'keperluan'    => [
+            'required' => 'keperluan  wajib diisi.'
+        ],
+    ];
+
+    public $pelanggaran = [
+
+        'tanggal'     => 'required',
+        'nis'     => 'required',
+        'jenis'     => 'required',
+        'poin'     => 'required',
+
+
+    ];
+
+    public $pelanggaran_errors = [
+
+        'tanggal'    => [
+            'required' => 'tanggal wajib diisi.'
+        ],
+        'nis'    => [
+            'required' => 'nis wajib diisi.'
+        ],
+        'jenis'    => [
+            'required' => 'jenis  wajib diisi.'
+        ],
+        'poin'    => [
+            'required' => 'poin  wajib diisi.'
+        ],
+
+
+
+    ];
 }

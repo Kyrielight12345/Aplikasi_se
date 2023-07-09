@@ -41,6 +41,8 @@ class Login extends BaseController
                     return redirect()->to(base_url('home/index_guru'));
                 } else if ($dataUser->akses == "kurikulum") {
                     return redirect()->to(base_url('home/index_kurikulum'));
+                } else if ($dataUser->akses == "bk") {
+                    return redirect()->to(base_url('home/index_bk'));
                 } else {
                     return redirect()->to(base_url('home/index_kepsek'));
                 }

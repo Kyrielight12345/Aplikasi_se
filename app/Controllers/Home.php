@@ -20,4 +20,8 @@ class Home extends BaseController
     {
         return view('kurikulum_view/dashboard');
     }
+    public function index_bk()
+    {
+        return view('bk_view/dashboard');
+    }
 }
