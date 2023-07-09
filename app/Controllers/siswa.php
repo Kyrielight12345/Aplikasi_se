@@ -79,7 +79,7 @@ class siswa extends BaseController
 
     public function update()
     {
-        $id = $this->request->getPost('nis');
+        $id = $this->request->getVar('nis');
         $validation = \Config\Services::validation();
 
         $data = array(
@@ -94,10 +94,10 @@ class siswa extends BaseController
             'no_hp'   => $this->request->getPost('no_hp'),
             'id_kelas'   => $this->request->getPost('id_kelas')
         );
-        if ($validation->run($data, 'siswa') ==  FALSE) {
+        if ($validation->run($data, 'siswa') == FALSE) {
             session()->setFlashdata('inputs', $this->request->getPost());
             session()->setFlashdata('errors', $validation->getErrors());
-            return redirect()->to(base_url('siswa/edit/', $id));
+            return redirect()->to(base_url('siswa/edit/' . $id));
         } else {
             // upload
             // $image->move(ROOTPATH . 'public/uploads',$name);

@@ -48,7 +48,20 @@
                         <a href="<?php echo base_url('kepsek_all/index_mapel'); ?>"><i class="fas fa-chalkboard-teacher"></i> <span>Data Mapel</span></span></a>
                     </li>
                     <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_jadwal'); ?>"><i class="fas fa-chalkboard-teacher"></i> <span>Data Jadwal</span></span></a>
+                    </li>
+                    <li class="menu">
                         <a href="<?php echo base_url('kepsek_all/index_regalisir'); ?>"><i class="fas fa-building"></i> <span>Status Regalisir </span></span></a>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><i class="fas fa-clipboard"></i> <span> Management Surat</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                            <li><a href="<?php echo base_url('kep_surat_masuk'); ?>">Surat Masuk</a></li>
+                            <li><a href="<?php echo base_url('kep_surat_keluar'); ?>">Surat Keluar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('kepsek_all/index_user'); ?>"><i class="fas fa-solid fa-user"></i></i> <span> User</span></span></a>
                     </li>
                 </ul>
             </div>

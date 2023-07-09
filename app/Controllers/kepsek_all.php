@@ -12,6 +12,8 @@ use App\Models\ruang_model;
 use App\Models\mapel_model;
 use App\Models\regalisir_model;
 use App\Models\siswa_model;
+use App\Models\jadwal_model;
+use App\Models\user_tu_model;
 
 class kepsek_all extends BaseController
 {
@@ -98,5 +100,19 @@ class kepsek_all extends BaseController
         $data['siswa'] = $model->paginate(4, 'siswa');
         $data['pager'] = $model->pager;
         echo view('kepsek_view/siswa/index', $data);
+    }
+    public function index_jadwal()
+    {
+        # code...
+        $model = new jadwal_model();
+        $data['jadwal'] = $model->getJadwal();
+        echo view('kepsek_view/jadwal/index', $data);
+    }
+    public function index_user()
+    {
+        # code...
+        $model = new user_tu_model();
+        $data['users'] = $model->getUsers();
+        echo view('kepsek_view/user/index', $data);
     }
 }

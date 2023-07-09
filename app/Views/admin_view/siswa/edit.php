@@ -40,12 +40,9 @@
                                     <h5 class="form-title student-info">Form Edit Siswa <span><a href="javascript:;"><i class="feather-more-vertical"></i></a></span>
                                     </h5>
                                 </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group local-forms">
-                                        <label>NIS <span class="login-danger">*</span></label>
-                                        <input class="form-control" type="text" placeholder="Isikan NIS" name="nis" value="<?php echo $siswa['nis']; ?>">
-                                    </div>
-                                </div>
+
+                                <input class="form-control" type="hidden" placeholder="Isikan NIS" name="nis" value="<?php echo $siswa['nis']; ?>">
+
                                 <div class="col-12 col-sm-4">
                                     <div class="form-group local-forms">
                                         <label>Nama Siswa <span class="login-danger">*</span></label>

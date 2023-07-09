@@ -73,7 +73,7 @@ class ruang extends BaseController
         if ($validation->run($data, 'ruang') ==  FALSE) {
             session()->setFlashdata('inputs', $this->request->getPost());
             session()->setFlashdata('errors', $validation->getErrors());
-            return redirect()->to(base_url('ruang/edit/', $id));
+            return redirect()->to(base_url('ruang/edit/' . $id));
         } else {
             // upload
             // $image->move(ROOTPATH . 'public/uploads',$name);

@@ -88,7 +88,7 @@ class surat_keluar extends BaseController
         if ($validation->run($data, 'surat_keluar') == FALSE) {
             session()->setFlashdata('inputs', $this->request->getPost());
             session()->setFlashdata('errors', $validation->getErrors());
-            return redirect()->to(base_url('surat_keluar/edit', $id));
+            return redirect()->to(base_url('surat_keluar/edit' . $id));
         } else {
             $model = new suratkeluar_model();
             //upload

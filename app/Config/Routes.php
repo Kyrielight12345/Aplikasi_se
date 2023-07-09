@@ -37,9 +37,12 @@ $routes->get('nilai/create', 'nilai::create');
 $routes->post('nilai/store', 'nilai::store');
 $routes->get('/guru_p/index/(:num)', 'guru_p::index/$1');
 $routes->post('guru_p/updateBatch', 'guru_p::updateBatch');
+$routes->get('/siswa/', 'siswa::index');
+$routes->post('siswa/update', 'siswa::update');
+$routes->get('/siswa/create', 'siswa::create');
 $routes->get('/nilai_mapel/index/(:num)', 'nilai_mapel::index/$1');
 $routes->get('/laporan', 'laporan::index');
-$routes->get('/laporan/create', 'laporan::create');
+
 $routes->get('/laporan/store', 'laporan::store');
 $routes->get('/m_kelas/index/(:num)', 'm_kelas::index/$1');
 

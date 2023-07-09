@@ -73,7 +73,7 @@ class mapel extends BaseController
         if ($validation->run($data, 'mapel') ==  FALSE) {
             session()->setFlashdata('inputs', $this->request->getPost());
             session()->setFlashdata('errors', $validation->getErrors());
-            return redirect()->to(base_url('mapel/edit/', $id));
+            return redirect()->to(base_url('mapel/edit/' . $id));
         } else {
             // upload
             // $image->move(ROOTPATH . 'public/uploads',$name);

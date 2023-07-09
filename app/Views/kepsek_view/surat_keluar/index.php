@@ -7,7 +7,7 @@
                         <h3 class="page-title">Management Surat </h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Management Surat Masuk</li>
+                            <li class="breadcrumb-item active">Management Surat Keluar</li>
                         </ul>
                     </div>
                 </div>
@@ -36,23 +36,22 @@
                                         <th>Pengirim</th>
                                         <th>Perihal</th>
                                         <th>file</th>
-                                        <th>status</th>
                                         <th class="text-end">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($surat_masuk as $key => $row) { ?>
+                                    <?php foreach ($surat_keluar as $key => $row) { ?>
                                         <tr>
                                             <td><?php echo $key + 1; ?></td>
                                             <td><?php echo $row['no_surat']; ?></td>
-                                            <td><?php echo $row['tgl_masuk']; ?></td>
+                                            <td><?php echo $row['tgl_keluar']; ?></td>
                                             <td><?php echo $row['pengirim']; ?></td>
                                             <td><?php echo $row['prihal']; ?></td>
-                                            <td><?php echo $row['file']; ?></td>
                                             <td><?php echo $row['status']; ?></td>
+                                            <td><?php echo $row['file']; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url('kep_surat_masuk/show_masuk/' . $row['id_surat']); ?>" class="btn btn-sm btn-info">
+                                                    <a href="<?php echo base_url('kep_surat_keluar/show_keluar/' . $row['id_surat']); ?>" class="btn btn-sm btn-info">
                                                         <i class="fa fa-eye"></i>
                                                     </a>
                                                 </div>

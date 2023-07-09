@@ -65,7 +65,7 @@
                         </ul>
                     </li>
                     <li class="menu">
-                        <a href="<?php echo base_url('home'); ?>"><i class="fas fa-solid fa-user"></i></i> <span> User</span></span></a>
+                        <a href="<?php echo base_url('user_tu'); ?>"><i class="fas fa-solid fa-user"></i></i> <span> User</span></span></a>
                     </li>
                 </ul>
             </div>

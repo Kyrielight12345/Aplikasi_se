@@ -1,13 +1,13 @@
-<<?php echo view('kepsek_view/partials_kepsek/header') ?> <<?php echo view('kepsek_view/partials_kepsek/sidebar') ?> <div class="page-wrapper">
+<<?php echo view('admin_view/partials/header') ?> <<?php echo view('admin_view/partials/sidebar') ?> <div class="page-wrapper">
     <div class="content container-fluid">
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-sub-header">
-                        <h3 class="page-title">Management Surat </h3>
+                        <h3 class="page-title">Management Guru </h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Management Surat Masuk</li>
+                            <li class="breadcrumb-item active">Management Guru</li>
                         </ul>
                     </div>
                 </div>
@@ -21,7 +21,12 @@
                         <div class="page-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h3 class="page-title">Daftar Surat</h3>
+                                    <h3 class="page-title">Daftar Guru</h3>
+                                </div>
+                                <div class="col-auto text-end float-end ms-auto download-grp">
+
+                                    <a href="<?php echo base_url('guru/create'); ?>" class="btn btn-outline-primary me-2"><i class="fas fa-plus"></i> Tambah</a>
+
                                 </div>
                             </div>
                         </div>
@@ -31,30 +36,24 @@
                                 <thead class="student-thread">
                                     <tr>
                                         <th>No</th>
-                                        <th>Nomor Surat</th>
-                                        <th>Tanggal </th>
-                                        <th>Pengirim</th>
-                                        <th>Perihal</th>
-                                        <th>file</th>
-                                        <th>status</th>
+                                        <th>ID Guru</th>
+                                        <th>Nama Guru </th>
                                         <th class="text-end">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($surat_masuk as $key => $row) { ?>
+                                    <?php foreach ($guru_dan_staf as $key => $row) { ?>
                                         <tr>
                                             <td><?php echo $key + 1; ?></td>
-                                            <td><?php echo $row['no_surat']; ?></td>
-                                            <td><?php echo $row['tgl_masuk']; ?></td>
-                                            <td><?php echo $row['pengirim']; ?></td>
-                                            <td><?php echo $row['prihal']; ?></td>
-                                            <td><?php echo $row['file']; ?></td>
-                                            <td><?php echo $row['status']; ?></td>
+                                            <td><?php echo $row['id_guru']; ?></td>
+                                            <td><?php echo $row['nama_guru']; ?></td>
+
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url('kep_surat_masuk/show_masuk/' . $row['id_surat']); ?>" class="btn btn-sm btn-info">
+                                                    <a href="<?php echo base_url('guru/show/' . $row['id_guru']); ?>" class="btn btn-sm btn-info">
                                                         <i class="fa fa-eye"></i>
                                                     </a>
+
                                                 </div>
                                             </td>
                                         </tr>

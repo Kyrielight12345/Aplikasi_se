@@ -223,4 +223,72 @@ class Validation extends BaseConfig
             'required'    => 'File wajib diupload.',
         ]
     ];
+    public $user_tu = [
+        'username'     => 'required',
+        'password'     => 'required',
+        'id_guru'     => 'required',
+        'akses'     => 'required',
+        'nama'     => 'required'
+    ];
+
+    public $user_tu_errors = [
+        'username' => [
+            'required'    => 'username wajib diisi.',
+        ],
+        'password'    => [
+            'required' => 'password wajib diisi.',
+        ],
+        'id_guru'    => [
+            'required' => 'id_guru  wajib diisi.',
+        ],
+        'akses'    => [
+            'required' => 'akses wajib diisi.',
+        ],
+        'nama'    => [
+            'required' => 'nama wajib diisi.',
+        ],
+    ];
+
+    public $guru_dan_staf = [
+        'id_guru'     => 'required',
+        'nama_guru'     => 'required'
+    ];
+
+    public $guru_dan_staf_errors = [
+        'id_guru' => [
+            'required'    => 'id_guru wajib diisi.',
+        ],
+        'nama_guru'    => [
+            'required' => 'nama_guru wajib diisi.',
+        ],
+    ];
+    public $jadwal = [
+        'id_mapel'     => 'required',
+        'id_ruang'     => 'required',
+        'id_guru'     => 'required',
+        'hari'     => 'required',
+        'jam_awal'     => 'required',
+        'jam_akhir'     => 'required',
+    ];
+
+    public $jadwal_errors = [
+        'id_mapel'    => [
+            'required' => 'ID Mapel wajib diisi.',
+        ],
+        'id_ruang'    => [
+            'required' => 'id ruang wajib diisi.',
+        ],
+        'id_guru'    => [
+            'required' => 'id guru wajib diisi.',
+        ],
+        'hari'    => [
+            'required' => 'hari wajib diisi.',
+        ],
+        'jam_awal'    => [
+            'required' => 'jam awal wajib diisi.',
+        ],
+        'jam_akhir'    => [
+            'required' => 'jam akhir  wajib diisi.',
+        ],
+    ];
 }
